@@ -13,7 +13,7 @@
  */
 typedef struct print_data
 {
-	onst char form;
+	const char form;
 	int (*print)(va_list *lalista, int*);
 } print_data_t;
 
