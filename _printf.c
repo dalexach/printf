@@ -9,9 +9,8 @@
 int _printf(const char *format, ...)
 {
 	print_data_t  f[] = {
-	{c, print_char},
-	{s, print_str},
-	{NULL, NULL}
+	{'c', print_char},
+	{'s', print_str},
 	};
 	int i, j, lenprinted;
 	int *tot = 0;
@@ -25,7 +24,7 @@ int _printf(const char *format, ...)
 	va_start(lalista, format);
 	for (i = 0; format[i]; i++)
 	{
-		if (format[i] == %)
+		if (format[i] == '%')
 		{
 			if (!format[i + 1])
 				return (-1);
@@ -37,13 +36,14 @@ int _printf(const char *format, ...)
 					i += 2;
 				}
 			}
-			if (format[i + 1] == %)
+			if (format[i + 1] == '%')
 				*tot = print_percent(tot), i += 2;
 		}
 		write(1, format + i, 1), *tot += 1;
 	}
 	lenprinted = *tot;
 	free(tot);
-	va_end(lalista), return (lenprinted);
+	va_end(lalista);
+	return (lenprinted);
 }
 
