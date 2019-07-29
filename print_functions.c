@@ -47,6 +47,6 @@ int print_percent(int *tot)
 	char c = '%';
 
 	_putchar(c);
-	tot += 1;
-	return (tot);
+	*tot += 1;
+	return (*tot);
 }
