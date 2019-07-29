@@ -22,24 +22,26 @@ int _printf(const char *format, ...)
 	if (tot == NULL)
 		return (0);
 	va_start(lalista, format);
-	for (i = 0; format[i]; i++)
+	for (i = 0; format[i];)
 	{
 		if (format[i] == '%')
 		{
-			if (!format[i + 1])
+			i++;
+			if (!format[i])
 				return (-1);
 			for (j = 0; j < 2; j++)
 			{
-				if (format[i + 1] == (f[j].form))
+				if (format[i] == (f[j].form))
 				{
 					*tot = f[j].print(&lalista, tot);
-					i += 2;
+					i++;
 				}
 			}
-			if (format[i + 1] == '%')
-				*tot = print_percent(tot), i += 2;
+			if (format[i] == '%')
+				*tot = print_percent(tot), i++;
 		}
-		write(1, format + i, 1), *tot += 1;
+		else
+			write(1, format + i, 1), *tot += 1, i++;
 	}
 	lenprinted = *tot;
 	free(tot);
