@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 	int i, j, lenprinted, *tot = 0;
 	va_list lalista;
 
+	va_start(lalista, format);
 	if (format == NULL)
 		return (-1);
 	tot = malloc(sizeof(int));
@@ -45,8 +46,7 @@ int _printf(const char *format, ...)
 			write(1, format + i, 1), *tot += 1, i++;
 	}
 	lenprinted = *tot;
-	free(tot);
-	va_end(lalista);
+	free(tot), va_end(lalista);
 	return (lenprinted);
 }
 
