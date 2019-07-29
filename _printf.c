@@ -12,8 +12,7 @@ int _printf(const char *format, ...)
 	{'c', print_char},
 	{'s', print_str},
 	};
-	int i, j, lenprinted;
-	int *tot = 0;
+	int i, j, lenprinted, *tot = 0;
 	va_list lalista;
 
 	if (format == NULL)
@@ -32,13 +31,15 @@ int _printf(const char *format, ...)
 			for (j = 0; j < 2; j++)
 			{
 				if (format[i] == (f[j].form))
-				{
-					*tot = f[j].print(&lalista, tot);
-					i++;
-				}
+					*tot = f[j].print(&lalista, tot), i++;
 			}
-			if (format[i] == '%')
-				*tot = print_percent(tot), i++;
+			if ((format[i] == '%') || (format[i - 1] == '%'))
+			{
+				if (format[i] == '%')
+					*tot = print_percent(tot), i++;
+				else
+					*tot = print_percent(tot), write(1, format + i, 1), *tot += 1, i++;
+			}
 		}
 		else
 			write(1, format + i, 1), *tot += 1, i++;
