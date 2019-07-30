@@ -1,22 +1,39 @@
 .TH man 3 "29 Jul 2019" "0.1" "_printf man page"
 .SH NAME
-_printf
+.B _printf
 .SH SYNOPSIS
 .B #include "holberton.h"
 .PP
 .B int _printf(const char
+t
 .I *format
 , ...);
 .PP
 .SH DESCRIPTION
-A variadic function that takes arguments from a list, compares them with a serie of cases to print to the standard ooutput as defined.
+A variadic function that takes arguments from a list, compares them with a serie of cases to print it accordit to the format intothe standard ooutput as defined.
+.SH FORMAT
+.TP
+%s
+- prints a string from a char* type of data, if the string to print is = NULL, prints ("null") instead
+.TP
+%c
+- prints a single character
+.TP
+%i
+- prints an integer.
+.TP
+%d
+- prints a double or float.
+.SH RETURN VALUE
+Upon successful return, these functions return the number of characters printed (excluding the null byte used to end output to strings).
+If an output error is encountered, a negative value is returned.
 .SH OPTIONS
 .B holberton
-does not take any options. However, you can supply studentname.
+Not yet.
 .SH SEE ALSO
-.I peerlearning(2), projectbased(2), fullstack(2), Betty(1)
+.I printf(3). putchar().
 .SH BUGS
 No known bugs.
 .SH AUTHOR
-Julien Barbier, Sylvain Kalache, Sophie Barbier, Guillaume Salva, Kris Bredemeier, Julien Cyr, Alex Gautier and all the Holberton mentors
+Daniela Chamorro <3 Daniela Gómez (n.n")
 
