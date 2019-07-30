@@ -62,5 +62,7 @@ This example prints a number("%d"), a string("%s") and a character("%c") sent as
 .SH BUGS
 No known bugs.
 .SH AUTHOR
-Daniela Chamorro =^_^= Daniela Gómez /|\\ ^._.^ /|\\
+Daniela Chamorro =^_^= email: 893@holbertonschool.com
+.PP
+Daniela Gómez /|\\ ^._.^/ |\\ email: 909@holbertonschool.com
 
