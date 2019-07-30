@@ -1,0 +1,22 @@
+.TH man 3 "29 Jul 2019" "0.1" "_printf man page"
+.SH NAME
+_printf
+.SH SYNOPSIS
+.B #include "holberton.h"
+.PP
+.B int _printf(const char
+.I *format
+, ...);
+.PP
+.SH DESCRIPTION
+A variadic function that takes arguments from a list, compares them with a serie of cases to print to the standard ooutput as defined.
+.SH OPTIONS
+.B holberton
+does not take any options. However, you can supply studentname.
+.SH SEE ALSO
+.I peerlearning(2), projectbased(2), fullstack(2), Betty(1)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Julien Barbier, Sylvain Kalache, Sophie Barbier, Guillaume Salva, Kris Bredemeier, Julien Cyr, Alex Gautier and all the Holberton mentors
+
