@@ -54,10 +54,14 @@ If an output error is encountered, a negative value is returned.
 .br
 .BR "	_printf("%c", 'A'); "
 .br
+.BR "   _printf("%R", 'Hello, World'); "
+.br
+.BR "   _printf("%R", 'Uryyb, jbeyq'); "
+.br
 .BR " }"
 .br
 .PP
-This example prints a number("%d"), a string("%s") and a character("%c") sent as arguments to print them according to the defined format.
+This example prints a number("%d"), a string("%s") and character("%c") sent as arguments to print them according to the defined format. Also this function can convert a string to rot13 o viceversa as you can see, send a message and it would convert to rot13 according to the message that you send.
 .SH OPTIONS
 .B Not yet.
 .SH SEE ALSO
