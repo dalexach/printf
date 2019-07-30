@@ -66,20 +66,17 @@ int print_integer(va_list lalista)
 */
 int print_rot13(va_list lalista)
 {
-	int i, j;
+	int i, j, k;
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char r[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char *c, *str;
 
-	str = malloc(sizeof(char *));
-	if (str == NULL)
-		return (-1);
 	c = va_arg(lalista, char *);
 	if (c == NULL)
-	{
-		free(str);
 		return (0);
-	}
+	str = malloc(1024);
+	if (str == NULL)
+		return (-1);
 	for (i = 0; c[i] != '\0'; i++)
 	{
 		for (j = 0; j < 52; j++)
@@ -89,13 +86,15 @@ int print_rot13(va_list lalista)
 				str[i] = r[j];
 				break;
 			}
-			if ((c[i] < 65  || c[i] > 90) || (c[i] < 97 || c[i] > 122))
+			else
+			{
 				str[i] = c[i];
+			}
 		}
 	}
-	for (i = 0; str[i] != '\0'; i++)
+	for (k = 0; str[k] != '\0'; k++)
 	{
-		_putchar(str[i]);
+		_putchar(str[k]);
 	}
 	free(str);
 	return (i);
