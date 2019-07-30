@@ -2,7 +2,6 @@
 /**
 * print_str - function that print a string
 *@lalista: list that contains the format inserted
-*@tot: sum of all the characters printed
 *Return: tot
 */
 int print_str(va_list lalista)

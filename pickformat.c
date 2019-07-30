@@ -34,7 +34,7 @@ int pickformat(va_list lalista, const char *format)
 					_putchar('%');
 					i++;
 					break;
-				 case '\0':
+				case '\0':
 					lenprinted = -2;
 					break;
 				default:
