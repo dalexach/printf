@@ -66,7 +66,7 @@ int print_integer(va_list lalista)
 */
 int print_rot13(va_list lalista)
 {
-	int i, j, k;
+	int i, j;
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char r[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char *c, *str;
@@ -92,9 +92,9 @@ int print_rot13(va_list lalista)
 			}
 		}
 	}
-	for (k = 0; str[k] != '\0'; k++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		_putchar(str[k]);
+		_putchar(str[i]);
 	}
 	free(str);
 	return (i);
