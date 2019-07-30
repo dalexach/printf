@@ -11,7 +11,7 @@ t
 .PP
 .SH DESCRIPTION
 A variadic function that takes arguments from a list, compares them with a
-serie of cases to print it accordit to the format intothe standard ooutput as defined.
+serie of cases to print it, according to the format, into the standard output.
 .SH FORMAT
 .TP
 %s
@@ -27,7 +27,10 @@ zero or more flags, an optional minimum field width, an optional
 precision and an optional length modifier.
 .TP
 %c
-- prints a single character
+- prints a single character.
+.TP
+%R
+- prints a string converted to ROT13 or deencripts a ROT13ed string
 .TP
 %i, %d
 - prints an integer.
