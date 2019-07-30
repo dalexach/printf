@@ -25,7 +25,7 @@ int print_str(va_list lalista)
 *@c: length of the number
 *Return: counter
 */
-int print_num(int n, int c)
+int print_num(unsigned int n, int c)
 {
 	if (n / 10)
 		c = print_num(n / 10, c);
@@ -41,16 +41,20 @@ int print_num(int n, int c)
 int print_integer(va_list lalista)
 {
 	int number, count = 0;
+	unsigned int unumber;
 
 	number = va_arg(lalista, int);
 	if (number < 0)
 	{
-		number *= -1;
+		unumber = number * -1;
 		_putchar('-');
-		count = print_num(number, count);
+		count = print_num(unumber, count);
 		count += 1;
 	}
 	else
-		count = print_num(number, count);
+	{
+		unumber = number;
+		count = print_num(unumber, count);
+	}
 	return (count);
 }
