@@ -13,5 +13,5 @@ int pickformat(va_list lalista, const char *format);
 int print_str(va_list lalista);
 /* task 1*/
 int print_integer(va_list lalista);
-int print_num(int n, int c);
+int print_num(unsigned int n, int c);
 #endif /* HOLBERTON_H */
