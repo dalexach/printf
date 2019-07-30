@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	int n = 100;
+	int n = -100;
 	int len;
 	len = _printf("%d", n);
 	printf("\n%d\n",len);
