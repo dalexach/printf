@@ -75,6 +75,11 @@ int print_rot13(va_list lalista)
 	if (str == NULL)
 		return (-1);
 	c = va_arg(lalista, char *);
+	if (c == NULL)
+	{
+		str = "";
+		return (0);
+	}
 	for (i = 0; c[i] != '\0'; i++)
 	{
 		for (j = 0; j < 52; j++)
