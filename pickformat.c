@@ -38,6 +38,7 @@ int pickformat(va_list lalista, const char *format)
 					break;
 				case 'R':
 					lenprinted += print_rot13(lalista), lenprinted--, i++;
+					break;
 				default:
 					_putchar('%');
 					break;
