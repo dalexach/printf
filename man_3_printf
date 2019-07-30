@@ -10,11 +10,21 @@ t
 , ...);
 .PP
 .SH DESCRIPTION
-A variadic function that takes arguments from a list, compares them with a serie of cases to print it accordit to the format intothe standard ooutput as defined.
+A variadic function that takes arguments from a list, compares them with a
+serie of cases to print it accordit to the format intothe standard ooutput as defined.
 .SH FORMAT
 .TP
 %s
-- prints a string from a char* type of data, if the string to print is = NULL, prints ("null") instead
+.IP
+The format string is a character string, beginning and ending in its
+initial shift state, if any.  The format string is composed of zero
+or more directives: ordinary characters (not %), which are copied
+unchanged to the output stream; and conversion specifications, each
+of which results in fetching zero or more subsequent arguments.  Each
+conversion specification is introduced by the character %, and ends
+with a conversion specifier.  In between there may be (in this order)
+zero or more flags, an optional minimum field width, an optional
+precision and an optional length modifier.
 .TP
 %c
 - prints a single character
@@ -25,11 +35,10 @@ A variadic function that takes arguments from a list, compares them with a serie
 %d
 - prints a double or float.
 .SH RETURN VALUE
-Upon successful return, these functions return the number of characters printed (excluding the null byte used to end output to strings).
+Upon successful return, this function return the number of characters printed (excluding the null byte used to end output to strings).
 If an output error is encountered, a negative value is returned.
 .SH OPTIONS
-.B holberton
-Not yet.
+.B Not yet.
 .SH SEE ALSO
 .I printf(3). putchar().
 .SH BUGS
