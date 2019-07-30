@@ -33,8 +33,6 @@ int pickformat(va_list lalista, const char *format)
 					lenprinted = -2;
 					break;
 				case 'd':
-					lenprinted += print_integer(lalista), lenprinted--, i++;
-					break;
 				case 'i':
 					lenprinted += print_integer(lalista), lenprinted--, i++;
 					break;
