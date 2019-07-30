@@ -60,7 +60,7 @@ int print_integer(va_list lalista)
 }
 
 /**
-* rot13 - function that converts a string into a rot 13 format
+* print_rot13 - function that converts a string into a rot 13 format
 *@lalista: list that contains the format inserted
 *Return: counter of the string
 */
@@ -69,8 +69,9 @@ int print_rot13(va_list lalista)
 	int i, j;
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char r[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	char *c;
+	char *c, *str;
 
+	str = malloc (sizeof(char*));
 	c = va_arg(lalista, char *);
 	for (i = 0; c[i] != '\0'; i++)
 	{
@@ -78,14 +79,17 @@ int print_rot13(va_list lalista)
 		{
 			if (c[i] == a[j])
 			{
-				c[i] = r[j];
+				str[i] = r[j];
 				break;
 			}
+			if ((c[i] < 65  || c[i] >90 ) || (c[i] < 97 || c[i] > 122))
+				 str[i] = c[i];
 		}
 	}
-	for (i = 0; c[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		_putchar(c[i]);
+		_putchar(str[i]);
 	}
+	free(str);
 	return (i);
 }
