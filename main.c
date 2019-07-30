@@ -4,9 +4,60 @@ int main(void)
 {
 	int n = 100;
 	int len;
+	char c = 'H', *s = "Prueba";
+	/*Sending numbers in variables*/
 	len = _printf("%d", n);
+        printf("\n%d\n",len);
+        len = printf("%d", n);
+        printf("\n%d\n",len);
+        len = _printf("%i", n);
+        printf("\n%d\n",len);
+        len = printf("%i", n);
+        printf("\n%d\n",len);
+	/*Sending a number*/
+	len = _printf("%d", 0);
+        printf("\n%d\n",len);
+        len = printf("%d", 0);
+        printf("\n%d\n",len);
+        len = _printf("%i", 0);
+        printf("\n%d\n",len);
+        len = printf("%i", 0);
+        printf("\n%d\n",len);
+	/*Tryin with string asigned*/
+	len = _printf("%d", s);
+        printf("\n%d\n",len);
+        len = printf("%d", s);
+        printf("\n%d\n",len);
+        len = _printf("%i", s);
+        printf("\n%d\n",len);
+        len = printf("%i", s);
+        printf("\n%d\n",len);
+	/*Trying sending a string*/
+	len = _printf("%d", "hola");
+        printf("\n%d\n",len);
+        len = printf("%d", "hola");
+        printf("\n%d\n",len);
+        len = _printf("%i", "hola");
+        printf("\n%d\n",len);
+        len = printf("%i", "hola");
+        printf("\n%d\n",len);
+	/*Trying with character asigned*/
+	len = _printf("%d", c);
+        printf("\n%d\n",len);
+        len = printf("%d", c);
+        printf("\n%d\n",len);
+        len = _printf("%i", c);
+        printf("\n%d\n",len);
+        len = printf("%i", c);
+        printf("\n%d\n",len);
+	/*Trying sending a character*/
+	len = _printf("%d", 'h');
 	printf("\n%d\n",len);
-	len = _printf("%i", n);
+	len = printf("%d", 'h');
+        printf("\n%d\n",len);
+	len = _printf("%i", 'h');
+        printf("\n%d\n",len);
+        len = printf("%i", 'h');
         printf("\n%d\n",len);
     /*char c = 'H', a = 0;
     char *name = "Eli", *s = "";
