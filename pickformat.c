@@ -36,6 +36,14 @@ int pickformat(va_list lalista, const char *format)
 				case '\0':
 					lenprinted = -2;
 					break;
+				case 'd':
+					lenprinted += print_integer(lalista);
+					i++;
+					break;
+				case 'i':
+					lenprinted += print_integer(lalista);
+					i++;
+					break;
 				default:
 					_putchar('%');
 					break;
