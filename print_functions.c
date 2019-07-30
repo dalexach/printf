@@ -29,7 +29,7 @@ int print_num(unsigned int n, int c)
 {
 	if (n / 10)
 		c = print_num(n / 10, c);
-	putchar(n % 10 + '0');
+	_putchar(n % 10 + '0');
 	return (c + 1);
 }
 
