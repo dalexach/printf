@@ -23,8 +23,7 @@ int pickformat(va_list lalista, const char *format)
 					c = va_arg(lalista, int), _putchar(c), i++;
 					break;
 				case 's':
-					lenprinted += print_str(lalista);
-					lenprinted--, i++;
+					lenprinted += print_str(lalista), lenprinted--, i++;
 					break;
 				case '%':
 					_putchar('%'), i++;
