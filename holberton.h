@@ -14,4 +14,6 @@ int print_str(va_list lalista);
 /* task 1*/
 int print_integer(va_list lalista);
 int print_num(unsigned int n, int c);
+/* advanced */
+int print_rot13(va_list lalista);
 #endif /* HOLBERTON_H */
