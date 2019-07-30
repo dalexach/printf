@@ -73,7 +73,6 @@ int print_rot13(va_list lalista)
 
 	str = malloc(sizeof(char *));
 	if (str == NULL)
-	{
 		return (-1);
 	c = va_arg(lalista, char *);
 	if (c == NULL)
