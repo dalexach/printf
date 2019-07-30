@@ -20,29 +20,23 @@ int pickformat(va_list lalista, const char *format)
 			switch (format[i + 1])
 			{
 				case 'c':
-					c = va_arg(lalista, int);
-					_putchar(c);
-					i++;
+					c = va_arg(lalista, int), _putchar(c), i++;
 					break;
 				case 's':
 					lenprinted += print_str(lalista);
-					lenprinted--;
-					i++;
+					lenprinted--, i++;
 					break;
 				case '%':
-					_putchar('%');
-					i++;
+					_putchar('%'), i++;
 					break;
 				case '\0':
 					lenprinted = -2;
 					break;
 				case 'd':
-					lenprinted += print_integer(lalista);
-					i++;
+					lenprinted += print_integer(lalista), lenprinted--, i++;
 					break;
 				case 'i':
-					lenprinted += print_integer(lalista);
-					i++;
+					lenprinted += print_integer(lalista), lenprinted--, i++;
 					break;
 				default:
 					_putchar('%');

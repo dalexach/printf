@@ -30,7 +30,7 @@ int print_num(int n, int c)
 	if (n / 10)
 		c = print_num(n / 10, c);
 	putchar(n % 10 + '0');
-	return(c + 1);
+	return (c + 1);
 }
 
 /**
@@ -43,6 +43,14 @@ int print_integer(va_list lalista)
 	int number, count = 0;
 
 	number = va_arg(lalista, int);
-	count = print_num(number, count);
+	if (number < 0)
+	{
+		number *= -1;
+		_putchar('-');
+		count = print_num(number, count);
+		count += 1;
+	}
+	else
+		count = print_num(number, count);
 	return (count);
 }
